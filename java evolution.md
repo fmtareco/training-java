@@ -10,7 +10,7 @@ The most important LTS versions are:
 ----
 
 # Java 8 (2014) — Major Functional Programming Upgrade
---
+
 
 * This was one of the biggest Java releases ever.
 
@@ -67,11 +67,12 @@ The most important LTS versions are:
 	* LocalDateTime
 	* Instant
 	* Duration
- 
+
+
 ----
 
 # Java 9 (2017) — Modular System
---
+
 
 Project Jigsaw (Modules)
 --
@@ -86,14 +87,12 @@ Project Jigsaw (Modules)
 	* Before JPMS, everything on the "Classpath" was visible to everyone. 
 	* With JPMS, internal packages are hidden by default.
 
-	The Core Concept: module-info.java
-	--
-	* To turn a project into a module, you must add a file named module-info.java at the root of your source folder. 
-		* requires: Declares a dependency on another module.
-		* exports: Makes a package accessible to other modules. [11, 12, 13, 14] 
+	The Core Concept: module-info.java	
+        * To turn a project into a module, you must add a file named module-info.java at the root of your source folder. 
+            * requires: Declares a dependency on another module.
+            * exports: Makes a package accessible to other modules. [11, 12, 13, 14] 
 
-	Why use it? (Benefits)
-	--
+	Why use it? (Benefits)	
 		* Strong Encapsulation: 
 			* You can have public classes that are still private to the module. 
 			* Other developers can't "hack" into your internal logic.
@@ -103,6 +102,7 @@ Project Jigsaw (Modules)
 		* Scalability (jlink): 
 			* You can create a custom, tiny Java Runtime (JRE) that only includes the modules your app actually uses, reducing size from 200MB+ to ~30MB. 
 ---
+
 
 JShell (REPL)
 --
@@ -120,7 +120,7 @@ Stream API improvements
 ----
 
 # Java 10 (2018)
---
+
 
 * Local Variable Type Inference
 ---
@@ -135,7 +135,6 @@ Stream API improvements
 ----
 
 # Java 11 (2018) — LTS
---
 
 * Major production adoption.
 
@@ -514,27 +513,24 @@ Performance Story:
 --
 * Represents the "leanest" JVM to date, with up to 20-30% reduction in heap usage compared to older versions and faster startup.
 
-
 ----
 
 # Summary
-Version	Major Feature
-Java 8	Lambdas, Streams, Optional, Date API
-Java 9	Modules (JPMS), JShell
-Java 10	var
-Java 11	HTTP Client, String improvements
-Java 14	Records (preview)
-Java 15	Text blocks
-Java 16	Records final
-Java 17	Sealed classes
-Java 19	Virtual threads (preview)
-Java 21	Virtual threads final, pattern matching
-Java 22	Unnamed Variables & Patterns , Statements before super(...), Stream Gatherers
-Java 23	Markdown Documentation Comments, Primitive Types in Patterns, ZGC Generational Mode
-Java 24	Ahead-of-Time (AOT) Class Loading, Compact Object Headers, Generational Shenandoah
-Java 25	Flexible Constructor Bodies, Module Import Declarations, Instance Main Methods, Performance Story 
 
-
-
-
+| Version | Major Feature |
+|---|---|
+| Java 8 | Lambdas, Streams, Optional, Date API | 
+| Java 9 | Modules (JPMS), JShell | 
+| Java 10 | var | 
+| Java 11 | HTTP Client, String improvements | 
+| Java 14 | Records (preview )| 
+| Java 15 | Text blocks | 
+| Java 16 | Records final | 
+| Java 17 | Sealed classes | 
+| Java 19 | Virtual threads (preview )| 
+| Java 21 | Virtual threads final, pattern matching | 
+| Java 22 | Unnamed Variables & Patterns , Statements before super(...), Stream Gatherers | 
+| Java 23 | Markdown Documentation Comments, Primitive Types in Patterns, ZGC Generational Mode | 
+| Java 24 | Ahead-of-Time (AOT) Class Loading, Compact Object Headers, Generational Shenandoah | 
+| Java 25 | Flexible Constructor Bodies, Module Import Declarations, Instance Main Methods, Performance Story  | 
 
