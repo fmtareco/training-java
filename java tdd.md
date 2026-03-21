@@ -13,8 +13,8 @@ you must shift your mindset from "*testing code*" to "**using tests to design co
 		* Write the minimum amount of code to make the test pass. 
 		* (It’s okay if the code is "ugly" at this stage).
    3. ***Refactor***: 
-	* Clean up the code while ensuring the test stays green. 
-	* Improve readability and remove duplication.
+		* Clean up the code while ensuring the test stays green. 
+		* Improve readability and remove duplication.
 
 ----
 
@@ -54,8 +54,8 @@ A. Unit Testing Strategy (The **Inner Loop**)
 
 B. Integration Testing Strategy (The **Outer Loop**)
 --
-* Use @WebMvcTest for lightweight Controller testing 
-* or @SpringBootTest for full context.
+* Use ***@WebMvcTest*** for lightweight Controller testing 
+* or ***@SpringBootTest*** for full context.
 
 ---
 	@WebMvcTest(ProductController.class)
