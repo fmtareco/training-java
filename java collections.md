@@ -7,15 +7,14 @@
 
 * differences  lie in ordering, performance, and null handling.
 
-1. HashMap
---
-	
+1. ***HashMap***
+--	
 	* Ordering: **None**. The order of elements can change over time.
 	* Performance: Fastest for general purpose ***O(1)*** for get and put.
 	* Nulls: **Allows one null key** and multiple null values.
 	* Best for: General storage where order doesn't matter.
 	
-2. LinkedHashMap
+2. ***LinkedHashMap***
 --
 	* Ordering: **Maintains insertion order** (or access order if configured). 
 		* It uses a **doubly-linked** list running through its entries.
@@ -23,7 +22,7 @@
 	* Nulls: Allows one null key and multiple null values.
 	* Best for: Caches (LRU) or when you need to iterate in the same order you added items.
 	
-3. TreeMap
+3. ***TreeMap***
 --
 	* Ordering: Maintains **natural order** (alphabetical/numerical) or a custom Comparator. 
 		* It is a Red-Black tree under the hood.
@@ -31,7 +30,7 @@
 	* Nulls: Does **not allow null keys** (it needs to compare them), but **allows null values**.
 	* Best for: When you need the keys to stay sorted at all times.
 	
-4. Hashtable (Legacy)
+4. ***Hashtable*** (Legacy)
 --
 	* Ordering: **None**.
 	* Thread-Safety: Synchronized (Thread-safe). 
@@ -55,7 +54,7 @@ Comparison Summary
 
 * main differences depend on how they handle ordering, concurrency, and capacity. 
 
-1. PriorityQueue
+1. ***PriorityQueue***
 --
 	* Ordering: **Not FIFO**. 
 		* It orders elements based on their natural priority (lowest value first) or a custom Comparator.
@@ -63,14 +62,14 @@ Comparison Summary
 	* Nulls: Does **not allow null elements**.
 	* Best for: Processing tasks based on importance rather than arrival time. 
 	
-2. LinkedList (as a Queue)
+2. ***LinkedList*** (as a Queue)
 --
 	* Ordering: **Standard FIFO** (First-In, First-Out).
 	* Performance: ***O(1)*** for basic operations (add/poll).
 	* Nulls: **Allows nulls** (though generally discouraged in queues).
 	* Best for: Simple, non-thread-safe FIFO operations where you also need List functionality.
 	
-3. ArrayDeque
+3. ***ArrayDeque***
 --
 	* Ordering: **Standard FIFO**.
 	* Performance: Generally **faster than LinkedList** because it uses a resizable array instead of node objects (less overhead, better cache locality).
@@ -108,7 +107,7 @@ Comparison Summary
 * differences mirror those of the Map interface, as most sets are internally backed by their corresponding map versions. 
 * The primary goal of a Set is to ensure uniqueness (no duplicate elements).
 
-1. HashSet
+1. ***HashSet***
 --
 	* Ordering: **No guarantee**. 
 		* The iteration order can change over time.
@@ -119,7 +118,7 @@ Comparison Summary
 	* Best for: 
 		* General-purpose use where you only care about uniqueness and speed.
 	
-2. LinkedHashSet
+2. ***LinkedHashSet***
 --
 	* Ordering: Maintains **insertion order**. 
 		* If you iterate through the set, elements appear in the order they were added.
@@ -128,7 +127,7 @@ Comparison Summary
 	* Nulls: Allows **one null element**.
 	* Best for: Scenarios where you need to preserve the order of elements (e.g., a "recently viewed" list).
 	
-3. TreeSet
+3. ***TreeSet***
 --
 	* Ordering: Maintains **natural order** (alphabetical/numerical) or a custom Comparator.
 	* Performance: 
@@ -138,7 +137,7 @@ Comparison Summary
 	* Best for: 
 		* When you need the elements to be sorted at all times or need to perform range searches (e.g., headSet, tailSet).
 		
-4. EnumSet
+4. ***EnumSet***
 --
 	* Ordering: Natural order of the Enum constants.
 	* Performance: Extremely fast (faster than HashSet). It uses a bit-vector (usually a single long) to represent the set.
@@ -164,7 +163,7 @@ Comparison Summary
 	* LinkedList. 
 * The choice between them usually comes down to how you plan to access and modify the data.
 
-1. ArrayList
+1. ***ArrayList***
 --
 	* Structure: Backed by a dynamically resizing array.
 	* Performance:
@@ -177,7 +176,7 @@ Comparison Summary
 	* Best for: 
 		* Frequent reading and occasional adding to the end of the list.
 
-2. LinkedList
+2. ***LinkedList***
 --
 	* Structure: Backed by a doubly-linked list (each element/node has a pointer to the next and the previous one).
 	* Performance:
@@ -191,7 +190,7 @@ Comparison Summary
 	* Best for: 
 		* Frequent insertions and deletions at the beginning or end of the list (often used as a Queue or Deque).
 		
-3. Vector (Legacy)
+3. ***Vector*** (Legacy)
 --
 	* Structure: Similar to ArrayList (array-based).
 	* Thread-Safety: Synchronized. 
@@ -199,7 +198,7 @@ Comparison Summary
 	* Best for: Legacy code. 
 		* For modern thread-safe lists, use **CopyOnWriteArrayList**.
 		
-4. CopyOnWriteArrayList (Concurrent)
+4. ***CopyOnWriteArrayList*** (Concurrent)
 --
 	* Structure: 
 		* Array-based, but **creates a fresh copy** of the underlying array every time it is modified (add/set/remove).
