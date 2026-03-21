@@ -9,6 +9,7 @@
 
 1. HashMap
 --
+	
 	* Ordering: **None**. The order of elements can change over time.
 	* Performance: Fastest for general purpose ***O(1)*** for get and put.
 	* Nulls: **Allows one null key** and multiple null values.
