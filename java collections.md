@@ -217,4 +217,55 @@ Tip:
 * In modern hardware, ArrayList is almost always faster than LinkedList even for many insertions, 
 	* because contiguous memory is much more "cache-friendly" for the CPU.
 
- 
+----
+
+# What collection to use ?
+
+* Use ***ArrayList*** 
+	* as your default List unless you are frequently inserting/removing from the beginning.
+* Use ***HashMap*** 
+	* for the fastest possible lookups 
+* Use ***TreeMap*** 
+	* only if you need the keys to be sorted or need to perform range queries (e.g., subMap).
+* Use ***ArrayDeque*** 
+	* instead of Stack for LIFO operations; it's faster and more modern.
+	
+	
+----
+
+#  ArrayList vs LinkedList
+
+ArrayList 
+--
+* uses a dynamic array for fast O(1) random access but 
+* slow O(n)insertion/deletion due to element shifting. 
+
+LinkedList 
+--
+* uses a doubly linked list, offering fast O(1)
+* insertions/deletions but slow O(n) traversal. 
+
+* ArrayList for reading data, and 
+* LinkedList for frequent modifications. 
+
+Key Differences:
+--
+* Data Structure: 
+		ArrayList is backed by a resizable array, while 
+		LinkedList is backed by a doubly linked list.
+	Access Time: 
+		ArrayList provides O(1) time complexity for index-based access,
+		whereas LinkedList requires O(n) time.
+	Insertion/Deletion: 
+		LinkedList is more efficient for adding or removing elements (O(1)) in the middle or at the beginning, 
+		while ArrayList takes O(n) because it requires shifting elements.
+	Memory Overhead: 
+		LinkedList consumes more memory than ArrayList because it stores pointers for the next and previous nodes.
+	Use Case: 
+		ArrayList is ideal for read-heavy applications, and 
+		LinkedList is better for scenarios with frequent insertions and deletions. 
+Conclusion:
+	ArrayList for the majority of scenarios due to better cache performance and lower overhead, 
+	switching to LinkedList only if you are frequently adding/removing elements from the middle of large lists
+
+
